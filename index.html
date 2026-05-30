@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imad khan | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="circles">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+    </div>
+
+    <nav class="navbar">
+        <img src="Assets/my_pic.jpg" alt="Profile Picture" class="nav-profile-pic">
+        <div class="logo">Imad <span>khan.Dev</span></div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="theme-btn" onclick="toggleTheme()">🌙</button></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="home" class="hero-card text-center">
+            <div class="hero-content">
+                <div class="image-wrapper">
+                    <img src="Assets/my_pic.jpg" class="profile-img" alt="Imad Khan">
+                </div>
+                <h1 class="glitch-text">I <span id="typing-text"></span></h1>
+                <p class="bio">Frontend Developer, Data Analyst.</p>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/Imad Khan" target="_blank">Facebook</a>
+                  <a href="https://www.instagram.com/Imad Khan" target="_blank">Instagram</a>
+                  <a href="https://www.linkedin.com/in/Imad Khan" target="_blank">LinkedIn</a>
+                  <a href="https://wa.me/+923185512803" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="content-card">
+            <h2 class="sec-title"><i class="fas fa-graduation-cap"></i> Academic Journey</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search institutes or degrees..." onkeyup="filterTable()">
+            </div>
+            <div class="table-wrapper">
+                <table id="eduTable">
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institute</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Primary Education</td>
+                            <td>Govt Mulyan Nisatta CHD</td>
+                            <td>2017</td>
+                        </tr>
+                        <tr>
+                            <td>Matric</td>
+                            <td>NBHPHS kalyas CHD</td>
+                            <td>2022</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td>GHSSSSA Nisatta CHD</td>
+                            <td>2024</td>
+                        </tr>
+                        <tr>
+                            <td>BS Software Engineering</td>
+                            <td>UET Peshawar</td>
+                            <td>2025-2029</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="skills" class="content-card">
+            <h2 class="sec-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML,CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">C</div>
+                <div class="skill-item">Data Analysis</div>
+                <div class="skill-item">Freelancing</div>
+                <div class="skill-item">Problem Solving</div>
+            </div>
+        </section>
+
+        <section id="cv" class="content-card text-center">
+            <h2 class="sec-title"><i class="fas fa-file-pdf"></i> Curriculum Vitae</h2>
+            <p style="margin-bottom: 25px; color: var(--text-dim);">Detailed overview of my professional skills and
+                experience.</p>
+            <button class="submit-btn" id="cvBtn" onclick="showCV()">
+                <i class="fas fa-eye"></i> View Resume
+            </button>
+            <div id="cvContainer">
+                <iframe id="cvFrame"></iframe>
+            </div>
+        </section>
+
+        <section id="contact" class="content-card">
+            <h2 class="sec-title"><i class="fas fa-envelope"></i> Get In Touch</h2>
+            <form class="cool-form" onsubmit="return validateForm()">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <textarea id="message" placeholder="Your Message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
